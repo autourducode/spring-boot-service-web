@@ -1,0 +1,16 @@
+# Spring Boot configuration
+server:
+  port: 0 # Port d'écoute du serveur Tomcat embarqué
+spring:
+  # Database
+  datasource:
+    driver-class-name: org.postgresql.Driver # Le nom de la classe qui implémente java.sql.Driver
+    url: jdbc:postgresql://localhost:5432/commandes # url de connexion à la base de données
+    username: autourducode # Nom d'utilisateur de la base de données
+    password:  autourducode # Mot de passe
+
+  # JPA/Hibernate propriétés
+  jpa:
+    hibernate:
+      ddl-auto: update # utilisée pour créer automatiquement les tables en fonction des classes d'entités dans l'application.
+    database-platform: org.hibernate.dialect.PostgreSQLDialect # le dialecte actuel permet de générer de meilleures requêtes SQL pour cette base de données
